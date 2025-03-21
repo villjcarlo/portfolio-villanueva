@@ -1,0 +1,276 @@
+/* Full-screen coverage */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0E0E0E;
+/*    overflow: hidden;*/
+    color: ghostwhite;
+    font-family: Titillium Web;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Door container */
+.door-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+/*    transition: opacity 1s ease-in-out;*/
+}
+
+/* Each door covers half the screen */
+.door {
+    background: brown;
+    position: absolute;
+    top: 0;
+    transition: transform 1.5s ease-in-out;
+}
+
+/* Position doors */
+.door-left {
+    position: absolute;
+    top: 0;
+    background-image: url('./images/doorLeft.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 50vw;
+    height: 100vh;
+    left: 0;
+    transform-origin: left;
+}
+
+.door-right {
+    position: absolute;
+    top: 0;
+    background-image: url('./images/doorRight.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 50vw;
+    height: 100vh;
+    right: 0;
+    transform-origin: right;
+}
+
+/* Open effect - Slide doors out */
+.door-container.open .door-left {
+    transform: translateX(-100%);
+}
+
+.door-container.open .door-right {
+    transform: translateX(100%);
+}
+
+/* Fade out doors */
+.door-container.open {
+    opacity: 0;
+    transition: opacity .5s ease-in-out .5s;
+}
+
+.door-text1 {
+    position: absolute;
+    top: 10%;  /* Adjust to center the text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1100;  /* Ensure it's above the doors */
+    transition: opacity 0.5s ease-in-out;
+}
+.door-text2 {
+    position: absolute;
+    top: 20%;  /* Adjust to center the text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1100;  /* Ensure it's above the doors */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.door-container.open .door-text {
+    opacity: 0;  /* Fade out text when doors open */
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: darkgray;
+    text-decoration: underline;
+}
+
+#about {
+    padding-top: 15vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    min-height: 100vh; 
+    background-image: url('./images/stars-black.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#about div div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#about div div div {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+  border: 2px solid white; /* White outline */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Soft white shadow */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Stack logo and text vertically */
+  align-items: center; /* Center content */
+  width: 120px; /* Adjust based on your design */
+}
+
+#about img {
+  height: 50px;
+  width: auto;
+}
+
+#about p {
+  color: white; /* Adjust text color for better visibility */
+  font-size: 20px;
+  margin: 0;
+}
+
+
+#projects {
+  padding-top: 10vh;
+  min-height: 100vh;
+  background-image: url('./images/stars-blk-blue.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: ghostwhite;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  padding: 20px;
+  height: 350px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+
+#contact {
+    padding-top: 5vh;
+    min-height: 30vh; 
+    background-image: url('./images/blue-sky.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#contact {
+  color: ghostwhite;
+  padding: 40px 20px;
+}
+
+.email-link {
+  color: ghostwhite;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

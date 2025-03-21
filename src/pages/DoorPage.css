@@ -1,0 +1,64 @@
+/* Ensure full-screen coverage at first */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #222;
+    overflow: hidden;
+}
+
+/* Full-screen door container */
+.door-container {
+    position: fixed; /* Ensures doors cover the full viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 2s ease-in-out;
+    z-index: 1000; /* Ensures it's above everything */
+}
+
+/* Each door covers half the screen */
+.door {
+    width: 50vw;
+    height: 100vh;
+    background: brown;
+    position: absolute;
+    top: 0;
+}
+
+/* Position doors correctly */
+.door-left {
+    left: 0;
+    transform-origin: left;
+}
+
+.door-right {
+    right: 0;
+    transform-origin: right;
+}
+
+/* Open effect - Slide doors out */
+.door-container.open .door-left {
+    transform: translateX(-100%);
+}
+
+.door-container.open .door-right {
+    transform: translateX(100%);
+}
+
+/* Fade out doors */
+.door-container.open {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+
+/* Make body scrollable after doors open */
+body.scrollable {
+    overflow: auto; /* Re-enable scrolling */
+}
