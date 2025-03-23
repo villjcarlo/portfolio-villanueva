@@ -260,7 +260,7 @@ body {
   padding: 40px 20px;
 }
 
-.email-link, phone-link {
+.email-link, .phone-link {
   color: ghostwhite;
   text-decoration: none;
   font-weight: bold;
