@@ -22,6 +22,9 @@ export default function DoorPage() {
             <div className={`door-text2 ${isOpen ? "fade-out" : ""}`}>
                 Full-Stack Web Developer
             </div>
+            <div className={`door-text3 ${isOpen ? "fade-out" : ""}`}>
+                Click to Explore my Space
+            </div>
             <div className="door door-left"></div>
             <div className="door door-right"></div>
         </div>
