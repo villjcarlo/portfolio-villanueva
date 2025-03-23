@@ -260,13 +260,13 @@ body {
   padding: 40px 20px;
 }
 
-.email-link {
+.email-link, phone-link {
   color: ghostwhite;
   text-decoration: none;
   font-weight: bold;
 }
 
-.email-link:hover {
+.email-link:hover, .phone-link:hover {
   text-decoration: underline;
 }
 
