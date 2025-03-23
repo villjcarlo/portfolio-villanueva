@@ -85,7 +85,7 @@ body {
     top: 10%;  /* Adjust to center the text */
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
+    font-size: 3vw;
     color: white;
     font-weight: bold;
     text-align: center;
@@ -97,7 +97,7 @@ body {
     top: 20%;  /* Adjust to center the text */
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 2vw;
     color: white;
     font-weight: bold;
     text-align: center;
@@ -105,6 +105,18 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+.door-text3 {
+    position: absolute;
+    top: 90%;  /* Adjust to center the text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1100;  /* Ensure it's above the doors */
+    transition: opacity 0.5s ease-in-out;
+}
 .door-container.open .door-text {
     opacity: 0;  /* Fade out text when doors open */
 }
