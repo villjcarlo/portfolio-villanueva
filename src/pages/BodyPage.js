@@ -126,6 +126,7 @@ export default function BodyPage() {
           <h1 className="py-2">Contact</h1>
           <p>📍 Pasig City, Philippines</p>
           <p>✉️ <a href="mailto:villjcarlo@gmail.com" className="email-link">villjcarlo@gmail.com</a></p>
+          <p>📞 <a href="tel:+639761228212" className="phone-link">+63 976 122 8212</a></p>
           
           <div className="social-icons mt-3">
             <a href="https://www.linkedin.com/in/johncarlovillanueva/" target="_blank" rel="noopener noreferrer">
